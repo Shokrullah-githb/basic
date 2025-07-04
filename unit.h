@@ -11,6 +11,7 @@ typedef struct {
     int departmentNumber;
     int unitNumber;
     UnitState state;
+    int rest_turns_remaining; // resting time.
 } Unit;
 
 typedef struct {

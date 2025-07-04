@@ -36,37 +36,40 @@ void move_unit_one_step(Unit *u) {
 }
 
 void update_units_movement() {
-    // ------------------------------------------------------------DONE: Iterate through all departments and units.
-    // For each unit in DISPATCHED or RETURNING state, move it one step toward its target.
-    // If the unit reaches its target, update its state accordingly.
-    // Don't forget to log the state changes using the appropriate logging function.
-
     // Iterate through all departments and their units
     for (int i = 0; i < department_count; i++) {
         for (int j = 0; j < departments[i].unit_count; j++) {
             Unit *unit = &departments[i].units[j];
 
-            // Only move units that are actively dispatched or returning
+            // Step 1: Move dispatched or returning units
             if (unit->state == UNIT_DISPATCHED || unit->state == UNIT_RETURNING) {
-                // Move the unit one step closer to its target
                 move_unit_one_step(unit);
 
-                // Check if the unit has arrived at its destination
+                // Step 2: If unit reaches destination
                 if (unit->x == unit->target_x && unit->y == unit->target_y) {
                     if (unit->state == UNIT_DISPATCHED) {
-                        // Unit has arrived at the incident
+                        // Arrived at incident location → Start operating
                         log_unit_arrived(unit, unit->target_x, unit->target_y);
                         unit->state = UNIT_OPERATING;
                         log_unit_state_change(unit, UNIT_OPERATING);
                     } else if (unit->state == UNIT_RETURNING) {
-                        // Unit has returned to its department base
-                        log_unit_arrived(unit, unit->target_x, unit->target_y); // Log arrival at base
-                        unit->state = UNIT_WAITING;
-                        log_unit_state_change(unit, UNIT_WAITING);
+                        // Arrived at base → Start resting instead of waiting
+                        log_unit_arrived(unit, unit->target_x, unit->target_y);
+                        unit->state = UNIT_RESTING;
+                        unit->rest_turns_remaining = 2; // Rest for 2 turns
+                        log_unit_state_change(unit, UNIT_RESTING);
                     }
+                }
+            }
+
+            // Step 3 & 4: Reduce rest turns and switch to waiting
+            if (unit->state == UNIT_RESTING) {
+                unit->rest_turns_remaining--;
+                if (unit->rest_turns_remaining <= 0) {
+                    unit->state = UNIT_WAITING;
+                    log_unit_state_change(unit, UNIT_WAITING);
                 }
             }
         }
     }
-
 }

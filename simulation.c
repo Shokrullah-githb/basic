@@ -74,37 +74,38 @@ void process_user_input() {
     }
 }
 
+
 void simulation_loop() {
     int turn_counter = 0;
 
     while (1) {
-        printf("\n\n===== Turn %d =====\n", turn_counter);
-
         if (turn_counter == 0) {
+            printf("\n\n===== Turn %d =====\n", turn_counter);
             process_user_input(); // منو نشان داده می‌شود
-
-            turn_counter++;       // برو به Turn 1
-
-            continue;             // از این مرحله بپر و برو سر دور بعدی، یعنی Turn 1
+            turn_counter++;
+            continue;
         }
 
-        // از Turn 1 به بعد
+        // انجام عملیات مربوط به turn (بدون چاپ نقشه)
         perform_turn_actions();
 
-        // منو را هر 10 دور نشان بده (مثلاً Turn 10, 20, ...)
+        // چاپ نقشه و وضعیت بعد از عملیات
+        printf("-------------------- Turn Actions --------------------\n");
+
+        // چاپ وضعیت turn
+        printf("==================\n");
+        printf("--- Turn %d ---\n", turn_counter);
+        printf("Press ENTER to proceed to the next turn...\n");
+
         if (turn_counter % 10 == 0) {
             process_user_input();
         }
 
         turn_counter++;
 
-        printf("Press Enter to proceed to the next turn...");
+        // منتظر فشردن Enter
         int c;
         while ((c = getchar()) != '\n' && c != EOF);
     }
 }
-
-
-
-
 

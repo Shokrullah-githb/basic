@@ -122,7 +122,7 @@ void update_incidents() {
 // ----------------------------------------------------------------DONE: Implement logic for updating incidents over time.
 // For each incident, check if all required units have arrived at the location.
 // Update the state of the incident based on unit arrivals and remaining operation time.
-// When an incident finishes, update the state of its dispatched units accordingly. 
+// When an incident finishes, update the state of its dispatched units accordingly.
 // Also remember to reset the dispatch count after operation is finished.
 
 
@@ -205,8 +205,6 @@ void update_incidents() {
     }
 
 }
-
-
 
 
 void ensure_incident_capacity() {

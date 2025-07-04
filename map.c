@@ -86,12 +86,17 @@ void place_units() {
     for (int i = 0; i < department_count; i++) {
         for (int j = 0; j < departments[i].unit_count; j++) {
             Unit *u = &departments[i].units[j];
-            if (strcmp(map[u->y][u->x].symbol, " .  ") == 0) {
+
+            // Only place units that are DISPATCHED or RETURNING
+            if ((u->state == UNIT_DISPATCHED || u->state == UNIT_RETURNING) &&
+                strcmp(map[u->y][u->x].symbol, " .  ") == 0) {
+
                 char type_char = (u->type == FIRE) ? 'F' :
                                  (u->type == MEDICAL) ? 'M' : 'P';
-                sprintf(map[u->y][u->x].symbol, "%c%d-%d", 
+
+                sprintf(map[u->y][u->x].symbol, "%c%d-%d",
                         type_char, u->departmentNumber, u->unitNumber);
-            }
+                }
         }
     }
 }
