@@ -1,0 +1,2 @@
+[2025-07-03 21:39:35] Simulation Started.
+[2025-07-03 21:45:27] Simulation Ended.

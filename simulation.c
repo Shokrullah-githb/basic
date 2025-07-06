@@ -37,7 +37,7 @@ void process_user_input() {
         printf("Enter your choice: ");
 
         fgets(input, sizeof(input), stdin);
-        sscanf(input, "%d", &choice);  // ورودی عدد را استخراج می‌کنیم
+        sscanf(input, "%d", &choice);  // It gives the input.
 
         switch (choice) {
             case 1: {
@@ -81,18 +81,18 @@ void simulation_loop() {
     while (1) {
         if (turn_counter == 0) {
             printf("\n\n===== Turn %d =====\n", turn_counter);
-            process_user_input(); // منو نشان داده می‌شود
+            process_user_input(); // Show menu
             turn_counter++;
             continue;
         }
 
-        // انجام عملیات مربوط به turn (بدون چاپ نقشه)
+        // Turn without map execute.
         perform_turn_actions();
 
-        // چاپ نقشه و وضعیت بعد از عملیات
+        // Showing maps, and maps with operation.
         printf("-------------------- Turn Actions --------------------\n");
 
-        // چاپ وضعیت turn
+        // Showing turn
         printf("==================\n");
         printf("--- Turn %d ---\n", turn_counter);
         printf("Press ENTER to proceed to the next turn...\n");
@@ -103,7 +103,7 @@ void simulation_loop() {
 
         turn_counter++;
 
-        // منتظر فشردن Enter
+        // Waiting for Enter.
         int c;
         while ((c = getchar()) != '\n' && c != EOF);
     }

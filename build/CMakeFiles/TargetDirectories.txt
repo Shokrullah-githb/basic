@@ -1,0 +1,3 @@
+C:/Users/Shokrullah/Desktop/Project/basic/build/CMakeFiles/basic.dir
+C:/Users/Shokrullah/Desktop/Project/basic/build/CMakeFiles/edit_cache.dir
+C:/Users/Shokrullah/Desktop/Project/basic/build/CMakeFiles/rebuild_cache.dir

@@ -29,6 +29,7 @@ const char* getUnitStateStr(UnitState s) {
         case UNIT_DISPATCHED: return "DISPATCHED";
         case UNIT_OPERATING: return "OPERATING";
         case UNIT_RETURNING: return "RETURNING";
+        case UNIT_RESTING: return "RESTING"; // Resting.
         default: return "UNKNOWN";
     }
 }

@@ -11,7 +11,7 @@
 
 typedef enum { FIRE, MEDICAL, POLICE } IncidentType;
 typedef enum { LOW, MEDIUM, HIGH } Priority;
-typedef enum { UNIT_WAITING, UNIT_DISPATCHED,UNIT_MOVING, UNIT_OPERATING, UNIT_RETURNING,UNIT_RESTING } UnitState; // creating Moving and Resting.
+typedef enum { UNIT_WAITING, UNIT_DISPATCHED, UNIT_OPERATING, UNIT_RETURNING,UNIT_RESTING } UnitState; // creating Moving and Resting.
 typedef enum { INCIDENT_WAITING, INCIDENT_OPERATION, INCIDENT_FINISHED } IncidentState;
 
 

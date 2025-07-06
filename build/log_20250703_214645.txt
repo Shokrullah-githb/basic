@@ -1,0 +1,24 @@
+[2025-07-03 21:46:45] Simulation Started.
+[2025-07-03 21:47:43] Incident Created: Type=FIRE, Priority=MEDIUM, Location=(9,8)
+[2025-07-03 21:47:47] Unit Dispatched: Type=FIRE, Dept=1, Unit=1, Target=(9,8)
+[2025-07-03 21:47:47] Unit State Change: Dept=1, Unit=1 changed state to DISPATCHED
+[2025-07-03 21:47:47] Unit Dispatched: Type=MEDICAL, Dept=1, Unit=1, Target=(9,8)
+[2025-07-03 21:47:47] Unit State Change: Dept=1, Unit=1 changed state to DISPATCHED
+[2025-07-03 21:47:58] Unit Arrived: Dept=1, Unit=1 arrived at Incident (9,8)
+[2025-07-03 21:47:58] Unit State Change: Dept=1, Unit=1 changed state to OPERATING
+[2025-07-03 21:47:58] Unit Arrived: Dept=1, Unit=1 arrived at Incident (9,8)
+[2025-07-03 21:47:58] Unit State Change: Dept=1, Unit=1 changed state to OPERATING
+[2025-07-03 21:47:58] Incident Status Change: Incident FIRE at (9,8) changed state to OPERATION
+[2025-07-03 21:48:07] Incident Finished: Type=FIRE, Location=(9,8)
+[2025-07-03 21:48:07] Incident Status Change: Incident FIRE at (9,8) changed state to FINISHED
+[2025-07-03 21:48:07] Unit Returning: Dept=1, Unit=1 returning to base (2,8)
+[2025-07-03 21:48:07] Unit State Change: Dept=1, Unit=1 changed state to RETURNING
+[2025-07-03 21:48:07] Unit Returning: Dept=1, Unit=1 returning to base (5,5)
+[2025-07-03 21:48:07] Unit State Change: Dept=1, Unit=1 changed state to RETURNING
+[2025-07-03 21:48:13] Unit Arrived: Dept=1, Unit=1 arrived at Incident (2,8)
+[2025-07-03 21:48:13] Unit State Change: Dept=1, Unit=1 changed state to UNKNOWN
+[2025-07-03 21:48:13] Unit Arrived: Dept=1, Unit=1 arrived at Incident (5,5)
+[2025-07-03 21:48:13] Unit State Change: Dept=1, Unit=1 changed state to UNKNOWN
+[2025-07-03 21:48:20] Unit State Change: Dept=1, Unit=1 changed state to WAITING
+[2025-07-03 21:48:20] Unit State Change: Dept=1, Unit=1 changed state to WAITING
+[2025-07-03 21:48:26] Simulation Ended.

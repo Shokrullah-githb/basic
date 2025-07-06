@@ -1,0 +1,15 @@
+[2025-07-04 11:27:20] Simulation Started.
+[2025-07-04 11:28:25] Incident Created: Type=MEDICAL, Priority=LOW, Location=(10,6)
+[2025-07-04 11:28:28] Unit Dispatched: Type=MEDICAL, Dept=1, Unit=1, Target=(10,6)
+[2025-07-04 11:28:28] Unit State Change: Dept=1, Unit=1 changed state to DISPATCHED
+[2025-07-04 11:28:36] Unit Arrived: Dept=1, Unit=1 arrived at Incident (10,6)
+[2025-07-04 11:28:36] Unit State Change: Dept=1, Unit=1 changed state to OPERATING
+[2025-07-04 11:28:36] Incident Status Change: Incident MEDICAL at (10,6) changed state to OPERATION
+[2025-07-04 11:28:36] Incident Finished: Type=MEDICAL, Location=(10,6)
+[2025-07-04 11:28:36] Incident Status Change: Incident MEDICAL at (10,6) changed state to FINISHED
+[2025-07-04 11:28:36] Unit Returning: Dept=1, Unit=1 returning to base (5,5)
+[2025-07-04 11:28:36] Unit State Change: Dept=1, Unit=1 changed state to RETURNING
+[2025-07-04 11:28:46] Unit Arrived: Dept=1, Unit=1 arrived at Incident (5,5)
+[2025-07-04 11:28:46] Unit State Change: Dept=1, Unit=1 changed state to UNKNOWN
+[2025-07-04 11:28:47] Unit State Change: Dept=1, Unit=1 changed state to WAITING
+[2025-07-04 11:28:56] Simulation Ended.

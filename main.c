@@ -9,7 +9,7 @@ int main() {
     log_simulation_start();
 
     // 2. Load the simulation configuration from the file
-    // The program expects a file named "config.txt" in the working directory 
+    // The program expects a file named "sample_config.txt" in the working directory 
     printf("Loading configuration from config.txt...\n");
     load_configuration("sample_config.txt");
     printf("Configuration loaded.\n");
